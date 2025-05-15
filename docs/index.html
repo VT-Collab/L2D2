@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+<meta charset="utf-8">
+<meta name="description" content="L2D2: Learning from 2D Drawings">
+<meta name="keywords" content="Imitation Learning">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>L2D2: Learning from 2D Drawings</title>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+  <link rel="icon" href="./favicon.ico?">
+  
+  <meta property="og:site_name" content="L2D2: Learning from 2D Drawings" />
+  <meta property="og:type" content="video.other" />
+  <meta property="og:title" content="L2D2: Learning from 2D Drawings" />
+  <meta property="og:url" content="https://collab.me.vt.edu/L2D2/" />
+  <meta property="og:image" content="./static/resources/front.png" />
+  <meta property="og:image:secure" content="./static/resources/front.png" />
+  <meta property="og:video" content="https://youtu.be/ZC3BjY1k18w" />
+  <meta property="og:video:secure" content="https://youtu.be/ZC3BjY1k18w" />
+
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">L2D2: Learning from 2D Drawings</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><a href="https://mehtashaunak.github.io">Shaunak A. Mehta</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="">Heramb Nemlekar</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="">Hari Sumant</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://dylanlosey.com/">Dylan P. Losey</a><sup>1</sup>,</span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Virginia Tech,</span>
+            <br>
+            <span class="brmod">Under Review</span>
+          </div>
+          
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/VT-Collab/L2D2"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <div class="content">
+            <h2 class="subtitle has-text-centered">
+              <strong>Robot Learning to play Air Hockey with 15 seconds of training data</strong>
+            </h2>
+            <video autoplay muted loop width="1080">
+              <source src="./static/resources/intro.mp4" type="video/mp4">
+            </video>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <!-- Abstract. -->
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-max-desktop">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/"
+                  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    </div>
+    <!--/ Abstract. -->
+
+    
+
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<!-- <section class="section"> -->
+  <!-- <div class="columns is-centered">
+    <div class="column is-half">
+      <h2 class="title is-2" style="text-align: center;">How Does it Work?</h2>
+      <tr>
+        <td>
+          <br>
+          <div class="columns is-centered has-text-centered">
+            <img src="./static/resources/front.png" style="width: 80%;"></img>
+          </div>
+        </td>
+      </tr>
+      <div class="is-vcentered interpolation-panel">
+        <div class="content has-text-justified">
+          <p style = "font-size: 18px">
+            Stable-BC leverages offline demonstrations provided by experts to learn a behavior cloned policy that is robust to covariate shift. We model the covariate shift in the robot and environment states as a linearized dynamical system. When this dynamical system is stable, the robot's learned behavior locally converges towards the behavior of the human demonstrations, thus mitigating covariate shift. However, only stabilizing this dynamical system does not guarantee that the robot will solve the task successfully. We therefore train the robot to match the expert's demonstrations using the standard behavior cloning loss function, and then add a second loss that stabilizes the dynamical system. This leads to a learned policy that performs the task successfully while also converging towards the expert behaviors.
+          </p>
+        </div>
+      </div>
+  </div>
+  </div> -->
+
+  <!-- <div class="columns is-centered">
+    <div class="column is-half">
+      <h2 class="title is-2" style="text-align: center;">Algorithm and Implementation</h2>
+      <tr>
+        <td>
+          <br>
+          <div class="columns is-centered has-text-centered">
+            <img src="./static/resources/algorithm.png" style="width: 80%;"></img>
+          </div>
+        </td>
+      </tr>
+      <div class="is-vcentered interpolation-panel">
+        <div class="content has-text-justified">
+          <p style = "font-size: 18px">
+            A summary of Stable-BC algorithm. The robot assumes access to the demonstrated state-action pairs and its own dynamics. If the robot has access to the environment dynamics, i.e. how the environment state evolves given the robot state, the environment state and the robot's actions, we use Equation (7) from the manuscript to train the robot's policy. However, if the robot does not know the environment dynamics (which is more often the case), we leverage the bounded stability and Equation (11) to learn a policy robust to covariate shift. The policy of the robot is a fully connected MLP initialized with random weights. The policy is optimized using ADAM optimizer with a learning rate of 0.001.
+          </p>
+        </div>
+      </div>
+  </div>
+  </div> -->
+
+<!-- </section> -->
+
+<!-- <section class="hero teaser">
+  <div class="hero-body"> -->
+    <!-- Simulation 1. -->
+    <!-- <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-2">Interactive Driving Simulation</h2>
+          <div class="columns is-centered has-text-centered">
+            <img src="./static/resources/sim1_preview.png" style="width: 50%;"></img>
+          </div>
+          <div class="content has-text-justified">
+            <p>
+              This simulation involves two vehicles trying to cross an intersection. One car is controlled by a simulated human while the other is an autonomous agent. The goal of the autonomous car is to reach the goal position while avoiding collision with the simulated human driver. Below we show some behaviors executed by the autonomous agent using the policies learned using BC and Stable-BC.
+            </p>
+          </div>
+          <video autoplay muted loop width="1080">
+            <source src="./static/resources/sim1_video.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Simulation 1. -->
+<!-- </section> -->
+
+
+<!-- <section class="hero teaser">
+  <div class="hero-body"> -->
+    <!-- Simulation 2. -->
+    <!-- <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-2">Quadrotor Simulation with Nonlinear Dynamics</h2> -->
+          <!-- <div class="columns is-centered has-text-centered">
+            <img src="./static/resources/sim1_preview.png" style="width: 50%;"></img>
+          </div> -->
+          <!-- <div class="content has-text-justified">
+            <p>
+              We then evaluate our approach in higher-dimesnaional settings with nonlinear system dynamics. A quadrotor has to navigate through a room to reach the goal location. Below we show some behaviors executed by the quadrotor while navigating around randomly placed obstacles in the room to reach the goal position using policies learned using BC and Stable-BC.
+            </p>
+          </div>
+          <video autoplay muted loop width="1080">
+            <source src="./static/resources/sim2_video.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Simulation 2. -->
+<!-- </section> -->
+
+<!-- <section class="hero teaser">
+  <div class="hero-body"> -->
+    <!-- Simulation 2. -->
+    <!-- <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-2">Point Mass Simulation with Visual Observations</h2>
+          <div class="content has-text-justified">
+            <p>
+              In this simulation, we evaluate our approach for visual learning settings. The robot receives an image with the goal location as an observation of the enviornment. The robot needs to figure out the correct actions that will lead it to reach the goal location. Below we show example input images and the behavior of the robot executed be the policies learned using BC and Stable-BC.
+            </p>
+          </div>
+          <video autoplay muted loop width="1080">
+            <source src="./static/resources/sim3_video.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Simulation 2. -->
+<!-- </section> -->
+
+<!-- <section class="hero teaser">
+  <div class="hero-body"> -->
+    <!-- Air Hockey. -->
+    <!-- <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-2">Air Hockey Experiments</h2>
+          <div class="content has-text-justified">
+            <p>
+              In this experiment, a 7DoF Franka Emika robot arm learns to play a simplified game of air hockey from human demonstrations. The participants use a 2DoF joystick to control the position of the robot on the air hockey table. Each participant is given a practice time of 2 minutes before starting to provide the demonstrations. The demonstrations from each participant includes data collected over ~2.5 minutes of play time. The data is recorded at a frequency of 20 Hz, generating ~3000 datapoints in ~2.5 minutes of play. The snippets of the participants playing air hockey to provide demonstrations to the robot are shown below.
+            </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <video poster="" id="1" autoplay  muted loop   height="100%">
+            <source src="./static/resources/user_1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" id="2" autoplay  muted loop  height="100%">
+            <source src="./static/resources/user_3.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" id="3" autoplay  muted loop  height="100%">
+            <source src="./static/resources/user_4.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" id="4" autoplay  muted loop  height="100%">
+            <source src="./static/resources/user_5.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" id="5" autoplay  muted loop  height="100%">
+            <source src="./static/resources/user_6.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" id="6" autoplay  muted loop  height="100%">
+            <source src="./static/resources/user_7.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" id="7" autoplay  muted loop  height="100%">
+            <source src="./static/resources/user_8.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" id="8" autoplay  muted loop  height="100%">
+            <source src="./static/resources/user_9.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" id="9" autoplay  muted loop  height="100%">
+            <source src="./static/resources/user_10.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" id="10" autoplay  muted loop  height="100%">
+            <source src="./static/resources/user_11.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <div class="content has-text-justified">
+            <p>
+              The robot has access to its own state and the state of the puck on the air hockey table, but it does not have access to the dynamics of the puck, i.e., how the motion of the puck will change given the robot's actions. We train the policies for BC and Stable-BC using substets of data from the demonstrations collected from the users. Across 15 seconds, 60 seconds and 120 seconds of data, we see that Stable-BC hits the puck more times and has a better performance than BC.
+            </p>
+            <h2 class="subtitle has-text-centered">
+              <strong>60 seconds of training data</strong>
+            </h2>
+            <video autoplay muted loop width="1080">
+              <source src="./static/resources/1200_video.mp4" type="video/mp4">
+            </video>
+
+            <h2 class="subtitle has-text-centered">
+              <strong>120 seconds of training data</strong>
+            </h2>
+            <video autoplay muted loop width="1080">
+              <source src="./static/resources/2400_video.mp4" type="video/mp4">
+            </video>
+        </div>
+      </div>
+    </div> -->
+
+    
+    <!--/ Air Hockey. -->
+<!-- </section> -->
+
+
+<!-- <section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+
+      <div class="column">
+        <div class="content">
+          <h2 class="subtitle has-text-centered">
+            <strong>60 Seconds of Data</strong> 
+          </h2>
+          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/resources/2400_video.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <h2 class="subtitle has-text-centered">
+            <strong>60 Seconds of Data</strong> 
+          </h2>
+          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/resources/2400_video.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+  </div>
+</section> -->
+
+<!-- <section class="section">
+  <div class="columns is-centered">
+    <div class="column is-half">
+      <h2 class="title is-2" style="text-align: center;">Comparison to Offline-RL</h2>
+      <tr>
+        <td>
+          <br>
+          <div class="columns is-centered has-text-centered">
+            <img src="./static/resources/sim_cql.png" style="width: 100%;"></img>
+          </div>
+        </td>
+      </tr>
+      <div class="is-vcentered interpolation-panel">
+        <div class="content has-text-justified">
+          <p style = "font-size: 18px">
+            In addition to the experiments provided in the paper, we also compare our approach to an Offline-RL algorithm (CQL) in the intersection environment. Our results suggest that Stable-BC converges to demonstrator level performance with fewer demonstrations as compared to CQL. However, when both approaches have access to large number of demonstrations, Offline-RL may outperform Stable-BC. This trend is observed due to the fact that Offline-RL has access to the reward funcitons in addition to expert demonstrations. While Stable-BC only leverages the noisy imperfect data provided by the demonstrator to learn a policy, CQL overcomes these imperfect demonstrations as it has access to the reward function during training. This suggests that when we have access to a large number of demonstrations along with the reward functions for the task, Offline-RL can be used to learn a policy that can outperform the demonstrator. However, when the robot has access to a few demonstrations or the reward function for the task is not readily available, Stable-BC can be leveraged to learn a robust policy that can match the demonstrator performance.
+          </p>
+        </div>
+      </div>
+  </div>
+  </div> -->
+
+  <!-- <div class="columns is-centered">
+    <div class="column is-half">
+      <h2 class="title is-2" style="text-align: center;">Algorithm and Implementation</h2>
+      <tr>
+        <td>
+          <br>
+          <div class="columns is-centered has-text-centered">
+            <img src="./static/resources/algorithm.png" style="width: 80%;"></img>
+          </div>
+        </td>
+      </tr>
+      <div class="is-vcentered interpolation-panel">
+        <div class="content has-text-justified">
+          <p style = "font-size: 18px">
+            A summary of Stable-BC algorithm. The robot assumes access to the demonstrated state-action pairs and its own dynamics. If the robot has access to the environment dynamics, i.e. how the environment state evolves given the robot state, the environment state and the robot's actions, we use Equation (7) from the manuscript to train the robot's policy. However, if the robot does not know the environment dynamics (which is more often the case), we leverage the bounded stability and Equation (11) to learn a policy robust to covariate shift. The policy of the robot is a fully connected MLP initialized with random weights. The policy is optimized using ADAM optimizer with a learning rate of 0.001.
+          </p>
+        </div>
+      </div>
+  </div>
+  </div> -->
+
+<!-- </section> -->
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+
+    </code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+      href="">
+     <i class="fas fa-file-pdf"></i>
+   </a>
+   <a class="icon-link" href="https://github.com/VT-Collab/L2D2" class="external-link" disabled>
+     <i class="fab fa-github"></i>
+   </a>
+      <p>Page template borrowed from  <a href="https://human2robot.github.io/"><span class="dnerf">Whirl</span></a>, <a href="https://nerfies.github.io"><span class="dnerf">Nerfies</span></a>, <a href="https://energy-locomotion.github.io/"><span class="dnerf">Energy Locomotion</span></a> and <a href="https://robotic-telekinesis.github.io/"><span class="dnerf">Robotic Telekinesis</span></a>.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
