@@ -60,14 +60,14 @@
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">L2D2: Robot Learning from 2D Drawings</h1>
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><a href="https://mehtashaunak.github.io">Shaunak A. Mehta</a><sup>1</sup>,</span>
-            <span class="author-block"><a href="">Heramb Nemlekar</a><sup>1</sup>,</span>
-            <span class="author-block"><a href="">Hari Sumant</a><sup>1</sup>,</span>
-            <span class="author-block"><a href="https://dylanlosey.com/">Dylan P. Losey</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://mehtashaunak.github.io">Shaunak A. Mehta</a>,</span>
+            <span class="author-block"><a href="https://herambnemlekar.github.io/">Heramb Nemlekar</a>,</span>
+            <span class="author-block"><a href="https://vt-collab.slack.com/archives/D088KC11GK1/p1747429635026249">Hari Sumant</a>,</span>
+            <span class="author-block"><a href="https://dylanlosey.com/">Dylan P. Losey</a>,</span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Virginia Tech,</span>
+            <span class="author-block">Virginia Tech</span>
             <br>
             <span class="brmod">Under Review</span>
           </div>
@@ -152,7 +152,20 @@
         <div class="column is-full-width">
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
-            <p>
+            <p>Robots should learn new tasks from humans.
+              But how do humans convey what they want the robot to do?
+              Existing methods largely rely on physical demonstrations, where the human teleoperates or kinesthetically guides the robot arm throughout their intended task.
+              Unfortunately --- as we scale up the amount of human data --- physical guidance becomes prohibitively burdensome.
+              Not only do teachers need to limit their motions to hardware constraints, but humans must also modify the environment (e.g., moving and resetting objects) to provide multiple task examples.
+              In this work we therefore propose L2D2, a sketching interface and imitation learning algorithm where human teachers can provide demonstrations by drawing the task.
+              L2D2 starts with a single third-person image of the robot arm and its workspace.
+              Using a tablet, users draw and label trajectories on this image to illustrate how the robot should act.
+              To collect new and diverse demonstrations, we no longer need the human to physically reset the workspace; instead, L2D2 leverages vision and language segmentation to autonomously vary object locations and generate synthetic images for the human to draw upon.
+              We recognize that drawing trajectories is not as information-rich as physically demonstrating the task.
+              Drawings are 2-dimensional (while the intended task occurs in our 3-dimensional world), and static drawings do not capture how the robot's actions affect its environment (e.g., pushing an object).
+              To address these fundamental challenges the next stage of L2D2 grounds the human's static, 2D drawings in our dynamic, 3D world by leveraging a small set of physical demonstrations.
+              Our experiments and user study suggest that L2D2 enables humans to provide more demonstrations with less time and effort than traditional approaches, and users prefer drawings over physical manipulation.
+              When compared to other drawing-based approaches, we find that L2D2 learns more performant robot policies, requires a smaller dataset, and can generalize to longer-horizon tasks.
             </p>
           </div>
         </div>
