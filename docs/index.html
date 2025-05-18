@@ -46,8 +46,8 @@
   <meta property="og:type" content="video.other" />
   <meta property="og:title" content="L2D2: Robot Learning from 2D Drawings" />
   <meta property="og:url" content="https://collab.me.vt.edu/L2D2/" />
-  <meta property="og:image" content="./static/resources/front.png" />
-  <meta property="og:image:secure" content="./static/resources/front.png" />
+  <meta property="og:image" content="./static/resources/front.jpg" />
+  <meta property="og:image:secure" content="./static/resources/front.jpg" />
   <meta property="og:video" content="https://youtu.be/ZC3BjY1k18w" />
   <meta property="og:video:secure" content="https://youtu.be/ZC3BjY1k18w" />
 
@@ -77,7 +77,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href=""
+                <a href="./static/resources/shaunak_auro2025.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -123,14 +123,14 @@
   </div>
 </section>
 
-<!-- <section class="hero teaser">
+<section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <div class="content">
             <h2 class="subtitle has-text-centered">
-              <strong>Robot Learning to play Air Hockey with 15 seconds of training data</strong>
+              <strong></strong>
             </h2>
             <video autoplay muted loop width="1080">
               <source src="./static/resources/intro.mp4" type="video/mp4">
@@ -141,7 +141,7 @@
       </div>
     </div>
   </div>
-</section> -->
+</section>
 
 
 <section class="hero is-light is-small">
@@ -191,27 +191,30 @@
 </section>
 
 
-<!-- <section class="section"> -->
-  <!-- <div class="columns is-centered">
-    <div class="column is-half">
-      <h2 class="title is-2" style="text-align: center;">How Does it Work?</h2>
+<section class="section">
+  <div class="columns is-centered">
+    <div class="container is-max-desktop">
+      <h2 class="title is-2" style="text-align: center;">L2D2: Overview</h2>
       <tr>
         <td>
           <br>
           <div class="columns is-centered has-text-centered">
-            <img src="./static/resources/front.png" style="width: 80%;"></img>
+            <img src="./static/resources/method.png" style="width: 100%;"></img>
           </div>
         </td>
       </tr>
+      <br>
+      <br>
       <div class="is-vcentered interpolation-panel">
         <div class="content has-text-justified">
           <p style = "font-size: 18px">
-            Stable-BC leverages offline demonstrations provided by experts to learn a behavior cloned policy that is robust to covariate shift. We model the covariate shift in the robot and environment states as a linearized dynamical system. When this dynamical system is stable, the robot's learned behavior locally converges towards the behavior of the human demonstrations, thus mitigating covariate shift. However, only stabilizing this dynamical system does not guarantee that the robot will solve the task successfully. We therefore train the robot to match the expert's demonstrations using the standard behavior cloning loss function, and then add a second loss that stabilizes the dynamical system. This leads to a learned policy that performs the task successfully while also converging towards the expert behaviors.
+            We propose L2D2, an approach that enables novice end-users to teach diverse tasks to the robot by providing drawings while minimizing thier physical interaction with the environment. 
+            We start with an image of the evnironment, where the users use language prompts to highlight the objects that they want to interact with. Our apprach leverages VLMs to identify these objects and automatically generates synthetic images covering diverse task configurations. The users can draw on these diverse images to teach the robot with physically interacting with it. If the robot makes an error when executing the task learned from drawings, the user can physically correct its behavior. These inputs by the users in the real world are treated as new demonstration data for the task. We use these physcial demonstrations to improve the trajectories reconstructed from drawings, followed by fine-tuning the robot policy with the updated reconstructions and the few real-world demonstrations. The diverse drawings teach the robot to generalize to different task settings, while the few physical demonstrations ground the drawings in the real world to enable the robot to perform the task accurately.
           </p>
         </div>
       </div>
   </div>
-  </div> -->
+  </div>
 
   <!-- <div class="columns is-centered">
     <div class="column is-half">
@@ -234,31 +237,34 @@
   </div>
   </div> -->
 
-<!-- </section> -->
+</section>
+<br>
+<br>
 
-<!-- <section class="hero teaser">
-  <div class="hero-body"> -->
+<section class="hero teaser">
+  <div class="hero-body">
     <!-- Simulation 1. -->
-    <!-- <div class="container is-max-desktop">
+    <div class="columns is-centered">
       <div class="columns is-centered has-text-centered">
-        <div class="column is-full-width">
-          <h2 class="title is-2">Interactive Driving Simulation</h2>
-          <div class="columns is-centered has-text-centered">
+        <div class="column is-half">
+          <h2 class="title is-2">Interface</h2>
+          <!-- <div class="columns is-centered has-text-centered">
             <img src="./static/resources/sim1_preview.png" style="width: 50%;"></img>
-          </div>
+          </div> -->
           <div class="content has-text-justified">
             <p>
-              This simulation involves two vehicles trying to cross an intersection. One car is controlled by a simulated human while the other is an autonomous agent. The goal of the autonomous car is to reach the goal position while avoiding collision with the simulated human driver. Below we show some behaviors executed by the autonomous agent using the policies learned using BC and Stable-BC.
+              Our interface consists of three parts. The first part shows an image of the environment with the robot and the objects for the task. Users can start drawing by selecting the "START" button. The drawing provided by the user show the general trajectory they want the robot to follow. In the second part, the users can select the points where they want to toggle the gripper of the robot by selecting the respective buttons. Finally, to enable users to select the orientation of the gripper, we provide a 3D visualization of the gripper that rotates in real-time with user inputs. Using this visualization and the three sliders on the interface the users can select how they want the robot to change its orientation at different stages of the task.
             </p>
           </div>
-          <video autoplay muted loop width="1080">
-            <source src="./static/resources/sim1_video.mp4" type="video/mp4">
+          <br>
+          <video autoplay muted loop width="720">
+            <source src="./static/resources/interface.mp4" type="video/mp4">
           </video>
         </div>
       </div>
-    </div> -->
+    </div>
     <!--/ Simulation 1. -->
-<!-- </section> -->
+</section>
 
 
 <!-- <section class="hero teaser">
