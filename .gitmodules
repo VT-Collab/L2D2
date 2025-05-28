@@ -1,0 +1,3 @@
+[submodule "L2D2/Detic/detectron2"]
+	path = L2D2/Detic/detectron2
+	url = https://github.com/facebookresearch/detectron2

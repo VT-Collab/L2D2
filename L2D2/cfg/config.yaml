@@ -1,0 +1,34 @@
+get_demo: False # Set True to collect demonstrations to train reconstruction policy or to collect drawings
+train: False # Train the reconstruction policy
+train_il: False # Train the imitation learning policy for any apporach
+eval: False # Evaluate the learned policy
+corr: False # Set True to collect physcial demos using teleoperation
+fine_tune: False # Set True to fine-tune the robot policy
+process: False # Gnerate state action pairs from user corrections
+
+get_img: False # Get the initial image of the environment
+get_prompts: False # Get the objects on interest in environment
+get_obj: False # Set True to retrieve object positions from user corrections
+filter: False # Set True to apply savgol filter to recorded demos
+
+task: 'play' # Set your task name
+alg: 'l2d2' # Set your algorithm name
+img_path: './DETIC/Detic/images/env.png'
+bg_path: './DETIC/Detic/images/env_empty.png'
+user: 0 # Set to 0 as default.
+demo_num: 0 # Set the initial demo number
+corr_num: 0 # Set the initial correction number
+num_ensembles: 5 # Number of models to train for a given dataset
+
+roi: [300, 400, 500, 300] # The region of interest in which you want to manipulate the object in camera frame
+roi_size: [500, 300] # Size of the roi
+
+defaults:
+    - _self_  
+    - override hydra/hydra_logging: disabled  
+    - override hydra/job_logging: disabled
+
+hydra:
+    output_subdir: null
+    run:
+        dir: .
