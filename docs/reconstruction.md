@@ -4,7 +4,7 @@ Below, we provide implementation details for collecting data for and training th
 We assume that the camera is placed in an approximately optimal location to minimize information loss.
 
 ### Data Collection
-First, we collect the dataset $\mathcal{D}_{map}$. We collect this data physically to restrict the datapoints in the robot's workspace $\mathcal{W}$, where the tasks will be carried out. To track the 2D position of the robot's end-effector in the image, we attach an aruco marker (marker_id = $75$ and dimensions=$50\times50$) to the robot's end-effector. 
+First, we collect the dataset $\mathcal{D}_{map}$. We collect this data physically to restrict the datapoints in the robot's workspace $\mathcal{W}$, where the tasks will be carried out. To track the 2D position of the robot's end-effector in the image, we attach an aruco marker (marker_id = $75$ and dimensions= $50\times50$ ) to the robot's end-effector. 
 
 Follow the steps in sequence and follow instructions on the screen to collect $\mathcal{D}_{map}$ by teleoperating the robot using a joystick
 
